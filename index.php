@@ -1,0 +1,2 @@
+<?php
+fann_test();
