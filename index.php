@@ -1,2 +1,5 @@
 <?php
-fann_test();
+
+phpinfo();
+
+// проверка гита
