@@ -1,9 +1,29 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
 include_once __DIR__ . '/core/sql.php';
 
 
-
 $newsList = News_getAll();
 
-var_dump($newsList);
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+</head>
+<body>
+<h1>Новости сайта</h1>
+
+<?php foreach ($newsList as $val): ?>
+
+    <h2><?= $val['title']?></h2>
+    <p>Дата публикации: <?= $val['posttime']?></p>
+    <p><?= $val['text']?></p>
+
+
+<?php endforeach; ?>
+</body>
+</html>

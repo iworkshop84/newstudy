@@ -50,3 +50,10 @@ function News_getAll(){
     }
     return $res;
 }
+
+function News_getOne($id){
+    $queryresults = dbQuery('SELECT * FROM artucles WHERE id='.$id);
+    $row = mysqli_fetch_array($queryresults, MYSQLI_ASSOC);
+
+    return $row;
+}
