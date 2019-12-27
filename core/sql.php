@@ -32,6 +32,7 @@ function dbFetchAssocSingle($queryresults){
 }
 
 
+
 function dbFetchAssoc($query){
     $res = [];
     $queryresults = dbQuery($query);
