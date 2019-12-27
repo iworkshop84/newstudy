@@ -1,5 +1,9 @@
 <?php
 
-phpinfo();
+include_once __DIR__ . '/core/sql.php';
 
-// проверка гита
+
+
+$newsList = News_getAll();
+
+var_dump($newsList);
