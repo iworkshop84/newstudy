@@ -43,6 +43,10 @@ function dbFetchAssoc($query){
 }
 
 
+//***************************** ФУЕКЦИИ МОДЕЛИ НОВОСТЕЙ ***********************************//
+
+
+
 function News_getAll(){
     $res = [];
     $queryresults = dbQuery('SELECT * FROM artucles');
@@ -57,4 +61,12 @@ function News_getOne($id){
     $row = mysqli_fetch_array($queryresults, MYSQLI_ASSOC);
 
     return $row;
+}
+
+function News_add($newsData){
+    $query ="INSERT INTO artucles (title, text, posttime) 
+    VALUES ('". $newsData['title'] ."', '". $newsData['text']. "', '". date('Y-m-d H-i-s', time()) . "')";
+    //var_dump($query);die;
+
+    return dbQuery($query);
 }

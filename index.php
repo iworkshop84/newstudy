@@ -7,6 +7,7 @@ include_once __DIR__ . '/core/sql.php';
 
 $newsList = News_getAll();
 
+
 ?>
 <!DOCTYPE html>
 <html lang="ru">
