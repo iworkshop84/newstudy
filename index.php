@@ -19,7 +19,7 @@ $newsList = News_getAll();
 
 <?php foreach ($newsList as $val): ?>
 
-    <h2><?= $val['title']?></h2>
+    <h2><a href="/article.php?id=<?= $val['id']?>"><?= $val['title']?></a></h2>
     <p>Дата публикации: <?= $val['posttime']?></p>
     <p><?= $val['text']?></p>
 

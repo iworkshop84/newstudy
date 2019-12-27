@@ -23,6 +23,7 @@ if(!empty($_GET['id'])){
 </head>
 <body>
 <h1><?= $newsOne['title']?></h1>
+<p><a href="/index.php" title="Главная">Главная</a></p>
 <p>Опубликована: <?= $newsOne['posttime']?></p>
 <p><?= $newsOne['text']?></p>
 
