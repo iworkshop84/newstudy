@@ -1,4 +1,6 @@
 <?php
+defined('APP') or die('Error 404');
+
 
 include_once __DIR__ . '/dbconfig.php';
 

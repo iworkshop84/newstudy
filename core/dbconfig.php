@@ -1,4 +1,5 @@
 <?php
+defined('APP') or die('Error 404');
 
 define('DB_NAME', 'newssite');
 /** Имя пользователя MySQL */
