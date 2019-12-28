@@ -76,3 +76,10 @@ function News_edit($newsData){
 
     return dbQuery($query);
 }
+
+function News_delete($newsID){
+    $query ="DELETE FROM articuls WHERE id='". $newsID ."'";
+    //var_dump($query);die;
+
+    return dbQuery($query);
+}

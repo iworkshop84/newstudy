@@ -26,7 +26,7 @@ if(!empty($_POST)){
 </head>
 <body>
 <h1>Добавить новость</h1>
-
+<p><a href="/index.php" title="Главная">Главная</a></p>
 <form action="/add.php" method="post" enctype="application/x-www-form-urlencoded">
     <p>Название статьи:</p>
         <input type="text" name="title">

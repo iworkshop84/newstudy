@@ -36,7 +36,9 @@ if(!empty($_POST)){
 </head>
 <body>
 <h1>Редактировать новость</h1>
-
+<p><a href="/index.php" title="Главная">Главная</a></p>
+<p>Посмотреть: <a href="/article.php?id=<?= $_GET['id']; ?>" title="Статья"><?= $res['title']; ?></a></p>
+<p><a href="/delete.php?id=<?= $_GET['id']; ?>" title="Удалить">Удалить новость</a></p>
 
 <form action="/edit.php?id=<?= $_GET['id'];?>" method="post" enctype="application/x-www-form-urlencoded">
     <p>Название статьи:</p>
