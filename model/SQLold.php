@@ -1,13 +1,12 @@
 <?php
 include_once __DIR__ . '/../core/dbconfig.php';
 
-class SQLold //extends mysqli
+class SQLold
 {
     private $link = NULL;
 
 
     public function __construct() {
-        //parent::__construct(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $this->link = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
         if (mysqli_connect_error()) {

@@ -28,25 +28,25 @@ class News
         return $row;
     }
 
-    public function News_add($data){
+    public function News_add(){
         $query ="INSERT INTO articuls (title, text, posttime) 
-        VALUES ('". $data->title ."', '". $data->text. "', '". date('Y-m-d H-i-s', time()) . "')";
+        VALUES ('". $this->title ."', '". $this->text. "', '". date('Y-m-d H-i-s', time()) . "')";
 
         $db = new SQLnew();
         return $db->query($query);
     }
 
 
-    public function News_edit($data){
-        $query ="UPDATE articuls SET title ='". $data->title ."', text ='". $data->text. "'
-        WHERE id ='". $data->id ."'";
+    public function News_edit(){
+        $query ="UPDATE articuls SET title ='". $this->title ."', text ='". $this->text. "'
+        WHERE id ='". $this->id ."'";
         $db = new SQLnew();
         return $db->query($query);
 
     }
 
-    public function News_delete($id){
-        $query ="DELETE FROM articuls WHERE id='". $id ."'";
+    public function News_delete(){
+        $query ="DELETE FROM articuls WHERE id='". $this->id ."'";
         $db = new SQLnew();
         return $db->query($query);
     }
