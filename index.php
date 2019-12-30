@@ -3,10 +3,13 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 define('APP', true);
 
-include_once __DIR__ . '/core/sql.php';
+
+include_once __DIR__ . '/model/News.php';
+
+$news = new News();
+$newsList = $news->News_getAll();
 
 
-$newsList = News_getAll();
 
 
 ?>
@@ -21,9 +24,9 @@ $newsList = News_getAll();
 
 <?php foreach ($newsList as $val): ?>
 
-    <h2><a href="/article.php?id=<?= $val['id']?>"><?= $val['title']?></a></h2>
-    <p>Дата публикации: <?= $val['posttime']?></p>
-    <p><?= $val['text']?></p>
+    <h2><a href="/article.php?id=<?= $val->id?>"><?= $val->title; ?></a></h2>
+    <p>Дата публикации: <?= $val->posttime; ?></p>
+    <p><?= $val->text; ?></p>
 
 
 <?php endforeach; ?>
